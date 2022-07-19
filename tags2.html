@@ -1,0 +1,73 @@
+*TABLE
+  Utilizado para criar tabelas;
+  Não recomendado para criar layouyt;
+  Precisa utilizar as tags TR e TD para criar as linhas e colunas;
+  Para usar uma tabela completa precisamos utilizar:
+    caption, col, colgroup, thead, tfoot, tbody.
+  Exemplo:
+    <table>
+      <tr>
+        <td>A1</td>
+        <td>B1</td>
+        <td>C1</td>
+      </tr>
+      <tr>
+        <td>A2</td>
+        <td>B2</td>
+        <td>C2</td>
+      </tr>
+    </table>
+
+*TR
+    (Table row) utilizado para criar linhas na tabela;
+    Usar sempre de uma tag TABLE;
+
+*TD
+    Usado para criar celulas nas linhas da tabela;
+    Usar sempre dentro de uma tag TR;
+    Atributos:
+      colspan = Define numero de colunas que esta célula deve ocupar;
+      headers = Define uma mais células de cabeçalho relacionadas;
+      rowspan = Define o número de linhas que esta célula deve ocupar.
+    Exemplo:
+    <table>
+      <tr>
+        <td colspan="2">A1</td> //Aqui defino que A1 vai ocupar 2 celulas (A1 e A2)
+        <td>C1</td>
+      </tr>
+      <tr>
+        <td>A2</td>
+        <td rowspan="2">B2</td> //Aqui defino que B2 vai ocupar 2 linhas (B2 e B3)
+        <td>C2</td>
+      </tr>
+      <tr>
+        <td>A3</td>
+        <td>C3</td>
+      </tr>
+    </table>
+
+*THEAD
+    É o cabeçalho da tabela;
+    Exemplo:
+    <table>
+      <thead> //Tag semântica para cabeçalho em tabelas.
+        <tr>
+          <th>Header 1</th> //Célula do cabeçalho.
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tr>
+        <td colspan="2">A1</td>
+        <td>C1</td>
+      </tr>
+      <tr>
+        <td>A2</td>
+        <td rowspan="2">B2</td>
+        <td>C2</td>
+      </tr>
+      <tr>
+        <td>A3</td>
+        <td>C3</td>
+      </tr>
+    </table>

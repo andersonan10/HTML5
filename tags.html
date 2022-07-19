@@ -173,3 +173,24 @@
         <source srcset="logo256.png" media="(min-width: 256px)">
         <img src="logo64.png" alt="Logo do meu site">
       </picture>
+
+
+*PICTURE
+      Usada para colocar mais de uma imagem de acordo com a responsividade da tela;
+      Utilizada junto com a TAG SOURCE;
+      Exemplo:
+      <picture>
+        <source srcset="logo.png" media="(min-width: 512px)">
+        <source srcset="logo256.png" media="(min-width: 256px)">
+        <img src="logo64.png" alt="Logo do meu site">
+      </picture>
+
+
+*TRACK
+    Usado para colocar legendas em videos;
+    Posso colocar mais de uma legenda;
+    Exemplo:
+      <video src="trailer.mp4" controls>
+        <track src="tracks/legenda_pt.vtt" label="Português (Brasil)" kind="subtitles" srclang="pt" default>
+        <track src="tracks/legenda_jp.vtt" label="Japonês" kind="subtitles" srclang="jp">
+      </video>
