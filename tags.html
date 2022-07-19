@@ -1,0 +1,139 @@
+*BODY
+  Por padrão tem: margin: 8px;
+
+*META
+  Usada para definir um metadado da página;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="application-name" content="Site do Anderson" /> // Este meta
+  define o nome que aparecerá no atalho da página (Area de trabalho)
+  <meta name="description" content="Página do DEV Anderson" />
+  <meta name="keywords" content="HTML5, TAG, META" /> // palavras chaves para
+  mecanismos de busca
+  <meta name="author" content="Anderson" />
+  <meta http-equiv="refresh" content="5" /> // Tempo que a pagina sera
+  atualizada <meta http-equiv="refresh" content="5;URL=sobre.html" /> // Quando
+  der o refresh, será redirecionado para outra página
+  <meta name="generator" content="Visual Studio Code" />
+
+*STYLE
+  Atributos dele: media="" text="" Usado no:
+  <head>
+    <style media="print">
+      //mudar a cor do fundo da pagina no momento da impressão
+      body {
+        background-color: coral;
+      }
+    </style>
+
+*SCRIPT
+    <script>
+      <script src="script.js">
+    </script>
+    //Recomendado usar no final do BODY
+
+    <script src="script.js" defer></script>
+    //Com o DEFER eu garanto que o script será carregado somente depois que a pagina ser carregada.
+
+*SPAN
+    Recomenda-se usar para aplicar CSS em algum texto;
+    Não tem peso semântico;
+    Caso precise mudar a aparência somente sem se preocupar com a semântica, o SPAN é recomendado.
+    <span></span>;
+  
+*LINK
+    Utilizada para linkar para um arquivo externo como CSS, HTML, também uma URL ou até mesmo um ícone;
+    Usado dentro da tag HEAD;
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icone.ico" type="image/x-icon">  //Este link personaliza o ícone da barra do navegador;
+    <link rel="alternate" href="application/json" title="VERSÃO EM JSON" href="link.json">  //Este link da uma versão alternativa do SITE, exemplo disso seria um site de galeria de fotos e a versão alternativa é em texto como JSON;
+    <link rel="author" href="https://andersondev10.io">
+    <link rel="dns-prefetch" href="https://instagran.com">  //Este link acelera a solicitação para o site que eu apontar por DNS;
+    <link rel="help" href="help.html">
+    <link rel="license" href="license.html">
+    <link rel="next" href="page2.html">  //Quando sabemos qual página provavelmente o usuário irá depois da página HOME, podemos usar o NEXT para deixar carregado em background;
+    <link rel="prev" href="page1.html">  //Funciona como o NEXT, carregando em background a página anterior;
+    <link rel="preload" href="https://instagran.com">  //Carrega o site externo, fazendo a conexão antes de carregar a própria página;
+    <link rel="prerender" href="https://instagran.com">  //Tenta fazer o render de umapágina externa para deixar preparada quando minha página solicitar.
+
+*NOSCRIPT
+    Serve para carregar um javascript alternativo para 2 situações:
+      1 - Quando o usuário desativar o javascript no navegador, ai será carregado o conteúdo do NOSCRIPT;
+      2 - Quando o navegador não tem suporte ao javascript do meu código padrão.
+    <noscript></noscript>
+
+*EMBED
+    Serve para embutir arquivos externos, como animações em flash.
+    <embed src="dragracer.swf" type="application/x-shockwave-flash" width="1024" height="768"></embed>
+
+  
+*OBJECT
+    Serve para colocar objetos que o HTML não suporta como padrão, exemplo arquivos pdf entre outros.
+    <object data="tag_object.pdf" type="application/pdf" width="800" height="600"></object>
+
+
+*PARAM
+    Não tem conteúdos;
+    Serve para passar parâmetros para um objeto;
+    Exemplo:
+    <object data="tag_object.pdf#page3" type="application/pdf" width="800" height="600">
+      <param name="page" value="3">  //Defino que vai abrir na página 3 como padrão.
+    </object>
+
+
+*BASE
+    Usada dentro da TAG HEAD, serve para especificar todos os links padrões do meu site
+    <base href="https://meusite.com.br" target="_blank">
+
+
+*IFRAME
+    Usado para colocar um outro site HTML dentro do meu site, como se fosse um quadro.
+    <iframe src="contato.html" width="800" height="600"></iframe>
+
+
+*A
+    Usado normalmente para linkar para um site externo
+    Exemplos:
+    <a href="https://meusite.com.br">Meu Site</a>
+    <a href="./contato.html">Contato</a>
+    <a href="mailto:meuemail.com.br?subject=Assunto qualquer">E-mail</a> //Aqui já abrirá o client de e-mail com assunto definido por parâmeto SUBJECT que passei.
+
+
+*IMG
+    Obrigatório usar 2 atributos:
+          SRC e ALT
+    Exemplos:
+    //Imagem qualquer
+    <img src="./assets/logo.png" alt="Foto da Logo" width="100" height="100">
+    
+    //Imagem com um link
+    <a href="https://meusite.com.br">
+      <img src="./assets/logo.png" alt="Foto da Logo" width="100" height="100">
+    </a>
+    
+    //Imagem com vinculo semântico com algum texto ou conteudo
+    <img src="./assets/logo.png" alt="Foto da Logo" width="100" height="100" longdesc="#logoDescricao">
+
+    <div id="logoDescricao">
+      <h1>Alguma Descrição aqui</h1>  
+    </div>
+
+
+*FIGURE
+    Para dar semântica a uma Imagem
+    <figure>
+      <img src="logo.png" alt="Foto da logo"> 
+      <figcaption>Descrição detalhada da Foto</figcaption> 
+    </figure>
+
+*FIGCAPTION
+    Serve para dar mostrar uma descrição ou subtitulo da imagem.
+    <figure>
+      <img src="logo.png" alt="Foto da logo"> 
+      <figcaption>Descrição detalhada da Foto</figcaption> 
+    </figure>
+
+
+*AUDIO
+    
