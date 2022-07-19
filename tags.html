@@ -21,16 +21,14 @@
   Atributos dele: media="" text="" Usado no:
   <head>
     <style media="print">
-      //mudar a cor do fundo da pagina no momento da impressão
+      /* mudar a cor do fundo da pagina no momento da impressão */
       body {
         background-color: coral;
       }
     </style>
-
+  </head>
 *SCRIPT
-    <script>
-      <script src="script.js">
-    </script>
+    <script src="script.js"></script>
     //Recomendado usar no final do BODY
 
     <script src="script.js" defer></script>
@@ -136,4 +134,42 @@
 
 
 *AUDIO
-    
+    Formatos suportados nativamente pelo HTML5:
+      MP3, WAV, OGG;
+    Exemplos:
+      <audio src="musica.mp3" controls></audio> //Com o atributo CONTROLS aparecerá o player de audio.
+
+      <audio src="musica.mp3" preload></audio> //Carrega o audio antes de clicar no player.
+
+      <audio src="musica.mp3" autoplay></audio> //Toca o audio assim que a página for carregada. OBS: Versões mais novas do Chrome não permite autoplay por padrão.
+
+      <audio src="musica.mp3" muted></audio> //Mesmo que o usuário toque no player, ele ficará mutado.
+
+      <audio src="musica.mp3" loop></audio> //O audio ficará em loop.
+
+
+*VIDEO
+    Formatos suportados nativamente pelo HTML5:
+      MP4, WEBM, OGG;
+    Assim como a TAG AUDIO, possui os atributos:
+      autoplay, controls, loop, muted
+    Exemplos:
+    <video src="video.mp4" poster="imagem.jpg"></video>  //Este atributo POSTER informa qual imagem quero como capa quando o video estiver carregando ou pausado;
+
+
+*SOURCE
+    Usado para colocar mais de uma fonte de midia (audio, video);
+    Util quando algum navegador ou S.O não suporta uma midia, ai é reproduzido a alternativa;
+    Exemplos:
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+      </audio>
+
+
+      //Usado mais de uma fonte de imagem com a TAG SOURCE, utilizando o atributo MEDIA para definir qual imagem será carregada dependendo da largura da tela do site.
+      <picture>
+        <source srcset="logo.png" media="(min-width: 512px)">
+        <source srcset="logo256.png" media="(min-width: 256px)">
+        <img src="logo64.png" alt="Logo do meu site">
+      </picture>
