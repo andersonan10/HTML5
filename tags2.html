@@ -151,4 +151,69 @@
       Esta tag é usada para definir um container em um código HTML para poder renderizar posteriormente com javascript normalmente.
 
 *COLGROUP
-      
+      Serve para estilizar um grupo de colunas na tabela;
+      Exemplo:
+        <table>
+          //Com o span="2" defino que estilizarei 2 colunas.
+          <colgroup span="2" style="background-color: red;"></colgroup>
+          <thead>
+            <tr>
+              <th>A</th>
+              <th>B</th>
+              <th>C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A1</td>
+              <td>B1</td>
+              <td>C1</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td>B2</td>
+              <td>C2</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Footer</td>
+            </tr>
+          </tfoot>
+        </table>
+
+
+*COL
+    Usada para fazer algumas especificações em uma coluna;
+    Precisa estar dentro da tag COLGROUP;
+    Exemplo:
+    <table>
+      <colgroup>
+        <col span="2" style="background-color: red;"> //Edito as 2 primeiras colunas.
+        <col style="background-color: blue;"> //Edito a ultima coluna.
+      </colgroup>
+      <thead>
+        <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A1</td>
+          <td>B1</td>
+          <td>C1</td>
+        </tr>
+        <tr>
+          <td>A2</td>
+          <td>B2</td>
+          <td>C2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Footer</td>
+        </tr>
+      </tfoot>
+    </table>
