@@ -1,0 +1,153 @@
+*HEADER
+  Tag Semântica para cabeçalho da página;
+  Podemos te mais de uma tag HEADER na página mas com contextos diferentes;
+  1 HEADER para cabeçalho da página e outro header para um artigo da mesma página;
+  Exemplo:
+    <header>
+      <img src="imagem.png" alt="Imagem qualquer">
+    </header>
+
+    <section>
+      <article>
+        <header>
+          <h1>Titulo do artigo</h1>
+        </header>
+      </article>
+    </section>
+
+    <footer></footer>
+
+
+*MAIN
+    Tag que define conteudo principal da página;
+    So deve ter um Main na página;
+    Exemplo:
+      <header>
+
+      </header>
+
+      <main>
+        <h1>Titulo do site</h1>
+      </main>
+
+      <footer>
+
+      </footer>
+
+
+*FOOTER
+    Define o rodapé da página;
+    Pode ser usada em uma ARTICLE ou SECTION;
+    Muito comum para links;
+    Exemplo:
+      <header></header>
+
+      <main></main>
+
+      <footer>
+        
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categoria</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+         
+        <p>Todos os direitos reservados.</p>
+      </footer>
+
+*ARTICLE
+      Usado para definir um artigo do site;
+      Normalmente usado em fóruns, blogs e notícias;
+      Exemplo:
+        <header></header>
+
+        <section></section>
+
+        <main>
+
+          <article>
+
+            <header>
+              <h1>Titulo da página</h1>
+            </header>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, illum facilis? Incidunt veritatis aut ab, harum commodi officia, blanditiis esse magni delectus consequatur, quos molestiae fuga aperiam asperiores necessitatibus doloribus?</p>
+
+          </article>
+
+        </main>
+
+        <footer></footer>
+
+*SECTION
+        Usada para definir uma sesão do site;
+        Não usar a tag SECTION quando:
+          - Se for uma área de NAVEGAÇÃO usar tag NAV;
+          - Se for um CABEÇALHO usar tag HEADER;
+          - Se for a área PRINCIPAL usar a tag MAIN;
+          - Se for um ARTIGO usar a tag ARTICLE;
+          - Se for um RODAPÉ usar a tag FOOTER;
+          Caso não seja nenhuma dessas alternativas ai sim usar a tag SECTION ao invés de uma DIV;
+        Exemplo:
+          <header></header>
+
+          <main></main>
+
+          <aside>
+
+            <nav></nav>
+
+            <section></section>
+
+          </aside>
+
+          <footer></footer>
+
+*ASIDE
+    Usado para colocar uma seção que apareça do lado de um artigo ou minha seção principaç do site;
+    Exemplo:
+    <header></header>
+
+    <main></main>
+
+    <aside>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis porro commodi debitis soluta itaque numquam nisi totam dignissimos eveniet officiis maiores nulla sapiente laborum vero animi, harum dolorum delectus corporis?</p>
+    </aside>
+
+    <footer></footer>
+
+*NAV
+    Tag para agrupar uma área de links de navegação;
+    Pode ser usado em mais de uma sesão da página;
+    Exemplo:
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Contato</a>
+      </nav>
+    </header>
+
+    <main></main>
+
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis porro commodi debitis soluta itaque numquam nisi totam dignissimos eveniet officiis maiores nulla sapiente laborum vero animi, harum dolorum delectus corporis?</p>
+    </aside>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </footer>
