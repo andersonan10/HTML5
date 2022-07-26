@@ -15,4 +15,97 @@
     </footer>
 
 *DETAILS
+    Tag usada para definir detalhes adicionais que o usuário pode exibir ou ocultar;
+    Qualquer tipo de conteúdo pode ser colocado dentro desta tag;
+    Por padrão o conteúdo dos detalhes não é exibido para o usuário;
+    A tag deve ter uma tag SUMARY dentro dela;
+    Contém o atributo OPEN (define se os detalhes são visíveis);
+    Exemplo:
+      <details>
+        <summary>Conteúdo qualquer</summary>
+        <p>Aqui vão os detalhes do conteúdo.</p>
+      </details>
+
+      //Exemplo com detalhe do conteúdo a mostra:
+      <details open>
+        <summary>Conteúdo qualquer</summary>
+        <p>Aqui vão os detalhes do conteúdo.</p>
+      </details>
+
+*SUMARY
+    É o resumo da area de detalhes;
+    Precisa estar dentro da tag DETAILS;
+    Exemplo:
+    <details>
+      <summary>Conteúdo qualquer</summary>
+      <p>Aqui vão os detalhes do conteúdo.</p>
+      <p>Acesse meu site: <a href="https://meusite.com.br">MEUSITE</a></p>
+    </details>
+
+*UL
+  Tag para criar listas não ordenadas;
+
+*OL
+  Tag para criar listas ordenadas;
+  Recebe os seguintes atributos:
+    REVERSED = Define a lista como decrescente;
+    START = Define qual valor a lista vai começar;
+    TYPE =  Define o tipo de marcação (1, A, a I, i)
+  Exemplo:
+    <ol>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JS</li>
+    </ol>
+
+    //Mudando a ordem:
+    <ol reversed>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JS</li>
+    </ol>
+
+    //Definindo valor para começar a lista:
+    <ol start="5">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JS</li>
+    </ol>
+
+    //Definindo tipo de lista:
+    <ol type="A">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JS</li>
+    </ol>
+
+*LI
+  Item de uma lista;
+  Exemplo:
+  <ol>
+    <li>HTML5</li>
+    <li value="50">CSS3</li> //Atributo VALUE posso alterar a sequencia dos números da lista;
+    <li>JS</li>
+    <li>SQL</li>
+    <li>NODE</li>
+    <li>REACT</li>
+  </ol>
+
+*MAP
+  Tag usada para criar um mapa de imagem clicável;
+  O atributo NAME é obrigatório para relacionar com a tag IMG;
+  A tag MAP define as áres clicáveis usando várias tags AREA;
+  Exemplo:
+    //Imagem precisa ter o atributo USEMAP para linkar com a tag MAP;
+    <img src="logo.png" alt="Logo de animal com 2 olhos" usemap="#mapa-logo">
+
+    //TAG precisa tar atributo NAME com mesmo valor do atributo da imagem USEMAP;
+    //Atributo SHAPE define tipo de area clicável;
+    //Atributo COORDS defino as coordenadas da área clicável;
+    <map name="mapa-logo">
+      <area shape="circle" coords="211,263,15" href="https://meusite.com.br" alt="Olho Esquerdo">
+      <area shape="circle" coords="301,263,15" href="https://meucanal.com.br" alt="Olho Direito">
+    </map>
+
+*AREA
     
