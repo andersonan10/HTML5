@@ -92,3 +92,74 @@
     <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
 
 *TIME
+  Tag usada para definir data e/ou hora;
+  Possui atributo DATETIME;
+  Exemplo:
+    <p>O dia da indepêndencia do Brasil é <time datetime="1822-09-07">7 de setembro de 1822</time>.</p>
+
+*U
+  Tag usada para definir um texto com erro;
+  Usado também para deixar texto sublinhado;
+  Cuidado ao usa-la pois pode confundir o usuário com um hiperlink;
+  Exemplo:
+    <p>Lorem ipsum dolor sit <u>amet consectetur</u>  adipisicing elit. Ea veritatis mollitia omnis perferendis fugiat debitis quae aperiam accusamus, minus vel nisi, rem suscipit eum eius. Maxime ex quaerat quis nemo!</p>
+
+*PRE
+  Tag usada para definir um texto pré-formatado;
+  Esta tag preserva os espaços e quebras de linha;
+  Exemplo:
+    <p>
+      Dev
+      Full Stack
+    </p>
+    
+    //Aqui a quebra de linha é preservada
+    <pre>
+      Dev
+      Full Stack
+    </pre>
+
+*SAMP
+    Tag que define um texto como saída de amostra de um programa de computador;
+    Exemplo:
+
+      <p>Estou tentando ligar o meu computador e está aparecendo a seguinte mensagem:</p>
+      <p><samp>Teclado não encontrado, aperte F1 para continuar.</samp></p>
+
+*VAR
+    Tag usada para definir um texto como variável;
+    Exemplo:
+      <p>
+        <var>a<sup>2</sup></var> + 
+        <var>b<sup>2</sup></var> = 
+        <var>c<sup>2</sup></var>
+      </p>
+
+*CODE
+    Tag usada para definir parte de um texto como parte de código de computador;
+    Exemplo:
+      <code>
+        $name = ['João', 'Carlos']; //Atribui array a uma variável
+      </code>
+
+*DL
+    Tag usada para definir uma lista com descrição;
+    A tag é usada em conjunto com as tags DT e DD;
+    Exemplo:
+      <dl>
+        <dt>Título</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptatum alias sequi laudantium hic dolorem, quidem rem fugiat dolorum, vitae nobis. Harum exercitationem nisi nulla vel, ea ipsa sed dolorum.</dd>
+      </dl>
+
+*DT
+    Tag usada para definir um termo ou título em uma lista com descrição;
+
+*DD
+    Tag usada para definir a descrição de um termo ou título;
+    Pode ter em seu conteúdo parágrafos, quebras de linha, imagens, links, listas e etc;
+    Exemplo:
+    <dl>
+      <dt>Título</dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptatum alias sequi laudantium hic dolorem, quidem rem fugiat dolorum, vitae nobis. Harum exercitationem nisi nulla vel, ea ipsa sed dolorum.</dd>
+      <img src="logo.png" alt="Logo da empresa">
+    </dl>

@@ -1,0 +1,82 @@
+*FORM
+  Tag para criar formulários;
+  Atributos:
+    - ACCEPT-CHARSET = Define o encode usado ao enviar o formulário;
+    - ACTION = Define para qual URL o formulário será enviado;
+    - AUTCOMPLETE = Define se os campos terão autocompletar com ajuda do navegador;
+    - ENCTYPE = Define qual codificação de formulário será usada;
+    - METHOD = Define qual será o método de envio do formulário;
+    - NAME = Define qual o nome do formulário;
+    - NOVALIDATE = Define se deve ser validado ao enviar;
+    - TARGET = Define qual o alvo ao enviar o formulário;
+  Exemplos:
+
+    //com o POST os dados não serão visualizados
+    <form action="/send" method="POST" target="_blank" enctype="multipart/form-data">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <input type="submit" value="Enviar">
+    </form>
+
+*INPUT
+    Tag usada para definir um campo de entrada;
+    A tag pode variar de várias maneiras dependendo do atributo TYPE;
+    Atributos:
+      - ACCEPT = Define o tipo de arquivo aceito para ser selecionado;
+      - ALT = Define um texto alternativo, aplicável a imagens;
+      - AUTOCOMPLETE = Define se o campo pode ter habilitado o auto completar;
+      - AUTOFOCUS = Define o foco neste campo quando a página é carregada;
+      - CHECKED = Define se o campo está marcado/selecionado;
+      - DIRNAME = Define o nome do campo que será enviado informando a direção do texto escrito;
+      - DISABLED = Define o campo como desabilitado;
+      - FORM = Define qual o formulário que esse campo pertence, mesmo o input estando dentro do FORM esse atributo enviará para outro formulário;
+      - FORMACTION = Define qual a URL de envio desse campo, mesmo o input estando dentro do FORM esse atributo enviará para outro formulário;
+      - FORMENCTYPE = Define qual o enctype do formulário ao enviar esse campo;
+      - FORMMETHOD = Sobrescreve o method padrão do formulário;
+      - FOMNOVALIDATE = Sobrescreve o atributo novalidate do form;
+      - FORMTARGET = Define qual será o target do formulário ao clicar neste botão;
+      - HEIGHT = Define a altura do campo;
+      - LIST = Define qual tag datalist está vinculada com este campo;
+      - MAX = Define um valor máximo, numeros e datas;
+      - MAXLENGTH = Define um comportamento máximo de caracteres, numeros;
+      - MIN = Define um valor mínimo, numeros e datas;
+      - MULTIPLE = Define se o usuário pode entrar com mais de um valor neste campo;
+      - NAME = Define o nome do campo;
+      - PATTERN = Define uma expressão regular para validação do campo;
+      - PLACEHOLDER = Define um texto de dica que descreve o valor esperado;
+      - READONLY = Define o campo como somente leitura;
+      - REQUIRED = Define o campo como obrigatório para envio do formulário;
+      - SIZE = Define a largura, em caracteres do campo;
+      - SRC = Define a fonte do arquivo;
+      - STEP = Define o intervalo de número permitidos;
+      - TYPE = Define o tipo do campo;
+      - VALUE = Define o valor inicial do campo;
+      - WIDTH = Define a largura do campo;
+    Exemplos:
+
+      <input type="text">
+      <input type="checkbox" checked>
+      <input type="radio" name="gender" value="M" checked>
+      <input type="radio" name="gender" value="F">
+      <input type="color" value="#FF0000">
+      <input type="date">
+      <input type="datetime-local">
+      <input type="email">
+      <input type="submit" value="OK">
+      <input type="file" accept="image/png"> // Só aceita arquivos .png
+      <input type="file" multiple> // Aceita mais de 1 arquivo para fazer upload
+      <input type="hidden" name="id" value="999"> // Campo escondido
+      <input type="month"> // Campo de escolha de mês
+      <input type="number" step="2"> // Aceita somente números, e pula de 2 em 2
+      <input type="password">
+      <input type="reset"> // Botão que limpa os dados do formulário
+      <input type="button" value="Enviar">
+      <input type="search"> // Caixa de busca do site
+      <input type="tel">
+      <input type="time"> // Horas
+      <input type="url"> // Campo que aceita links
+      <input type="week"> // Campo de calendário de semana
+      <input type="range" min="0" max="100" value="50">
+
+
+
