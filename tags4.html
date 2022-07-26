@@ -108,4 +108,94 @@
     </map>
 
 *AREA
-    
+    Tag para definirmos as coordenadas da area clicavel da imagem;
+    Sempre dentro da tag MAP;
+    Exemplo:
+    <map name="mapa-logo">
+      <area shape="circle" coords="211,263,15" href="https://meusite.com.br" alt="Olho Esquerdo">
+      <area shape="circle" coords="301,263,15" href="https://meucanal.com.br" alt="Olho Direito">
+
+      <area shape="rect" coords="0,0,20,20" href="https://meugithub.com.br" alt="Github">
+    </map>
+
+*ABBR
+    Tag para definir uma abreviação;
+    Utiliza o atributo TITLE para especificar a abreviação;
+    Exemplo:
+      <p>Lorem ipsum dolor, <abbr title="São paulo">SP</abbr> sit amet consectetur adipisicing elit. Veniam maxime ex reiciendis, neque, laborum tempora doloribus assumenda numquam autem voluptates aliquid. Autem aut beatae dolorum aperiam ut, vel cum rem.</p>
+
+*B
+    Serve para deixar um texto ou uma palavra em negrito;
+    Não tem peso semântico;
+    Se quiser deixar em negrito com peso semântico, utilizo a tag STRONG;
+    Exemplo:
+
+      <p>Lorem ipsum dolor sit amet <b>consectetur adipisicing elit.</b>  Placeat quia quam aut voluptas ipsum odit enim possimus? Et fugiat expedita beatae quis atque aspernatur in dolor obcaecati? Accusamus, alias consectetur.</p>
+
+*BDI
+    Tag para definir em um texto a direção de leitura quando não sabemos a direção;
+    Exemplo:
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, numquam! Porro aliquid facere itaque ullam labore eveniet quia sapiente, suscipit tenetur similique nostrum asperiores et dicta aliquam consequuntur eum ipsum?</p>
+
+      <ul>
+        <li><bdi>João</bdi></li>
+        <li><bdi>Marcio</bdi></li>
+        <li><bdi>Ricardo</bdi></li>
+        <li><bdi>Glauber</bdi></li>
+        <li><bdi>تريه للشخص</bdi></li>
+      </ul>
+
+*BDO
+      Tag para definir a direção de leitura do teto quando sabemos a direção;
+      Usado para substituir a direção de leitura padrão do texto;
+      Precisa ter o atributo DIR;
+      Exemplo:
+
+        //Lendo da direita para esquerda
+        <bdo dir="rtl">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quo, veritatis sint, iste temporibus corrupti quas itaque animi ex libero eos quis, quibusdam dicta earum deleniti sed exercitationem deserunt vero?</p>
+        </bdo>
+
+        //Lendo da esquerda para direita
+        <bdo dir="rtl">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quo, veritatis sint, iste temporibus corrupti quas itaque animi ex libero eos quis, quibusdam dicta earum deleniti sed exercitationem deserunt vero?</p>
+        </bdo>
+
+*BLOCKQUOTE
+        Tag para fazer uma citação externa;
+        Possui o atributo CITE;
+        Exemplo:
+          <blockquote cite="https://pt.wikipedia.org/wiki/HTML5">
+            HTML5 (Hypertext Markup Language, versão 5) é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software.[1] É a quinta versão da linguagem HTML. 
+          </blockquote>
+
+*Q
+    Tag para fazer uma citação simples;
+    Exemplo:
+          <p>
+            Lorem ipsum dolor sit amet, <q cite="https://sitecitado.com.br">consectetur adipisicing elit.</q>  Assumenda soluta vitae magni a cum molestiae in, illo error ab adipisci voluptate repellat aperiam reprehenderit similique consequuntur ducimus quisquam eaque perferendis.
+          </p>
+
+*WBR
+    Tag usada para definir onde no texto é aceitável adicionar uma quebra de linha se necessário;
+    Exemplo:
+
+          //Essa é uma única palavra gigante que pode ter quebra de linha se necessário;
+          <p>
+            pneu<wbr>moultrami<wbr>cros<wbr>copicos<wbr>silicovul<wbr>canoconiótico.
+          </p>
+
+*CITE
+    Tag usada para definir o título de uma obra (livro, música, filme, pintura, escultura ou etc);
+    Exemplo:
+          <p><cite>Vingadores: Endgame</cite>  foi um filme de 2019 dirigido por Anthony Russo e Joe Russo.</p>
+
+*DATA
+    Tag para associar um texto a algum outro dado;
+    importante para deixar legível tanto para humanos quanto para programas;
+    Exemplo:
+
+          //para nós humanos é fácil interpretar que são tipos de camisas, mas para programas estamos atribuindo valores como dados
+          <data value="1">Camiseta P</data>
+          <data value="2">Camiseta M</data>
+          <data value="3">Camiseta G</data>
