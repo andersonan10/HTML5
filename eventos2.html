@@ -1,0 +1,14 @@
+*EVENTOS: AFTERPRINT $ BEFOREPRINT
+  Exemplo de mostrar um alerta na página antes e depois de imprimir:
+
+  <body onbeforeprint="debug(event)">
+    
+    <script>
+      function debug(e) {
+        alert('Evento: ' + e.type);
+      }
+    </script>
+  </body>
+
+
+*EVENTO: BEFOREUNLOAD

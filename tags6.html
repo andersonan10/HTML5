@@ -79,4 +79,244 @@
       <input type="range" min="0" max="100" value="50">
 
 
+*BUTTON
+    Tag para criar botão clicável;
+    Dentro da tag posso colocar texto ou imagem;
+    Sempre especificar o atributo TYPE;
+    Atributos:
+      autofocus, disabled, form, formaction, formenctype, formmethod, formnovalidate, formtarget, name, type, value;
+    Exemplos:
+      <form id="formulario">
+        <input type="text" name="name" value="Qualquer">
+      </form>
 
+      <button type="button">Botão</button>
+      <button type="reset" form="formulario">Limpar</button>
+      <button type="submit" form="formulario">Enviar</button>
+
+      //Quando o botão estiver fora do formulário, eu associo a ele com o atributo FORM atribuindo o valor de do ID;
+
+*FIELDSET
+    Tag usada para definir um grupo de campos de formulários;
+    Esta tag desenha uma caixa ao redor dos campos agrupados;
+    Ela pode ter uma tag LEGEND para adicionar uma legenda;
+    Exemplo:
+      <fieldset>
+
+        <input type="text" name="zipcode" placeholder="Cep...">
+        <input type="text" name="address" placeholder="Endereço">
+        <input type="text" name="complement" placeholder="Complemento">
+        <input type="text" name="district" placeholder="Bairro">
+        <input type="text" name="city" placeholder="Cidade">
+
+      </fieldset>
+  
+*LEGEND
+    Tag para adicionar legendas no grupo de formulários;
+    Exemplo:
+      <fieldset>
+
+        <legend>Endereço de Entrega</legend>
+
+        <input type="text" name="zipcode" placeholder="Cep...">
+        <input type="text" name="address" placeholder="Endereço">
+        <input type="text" name="complement" placeholder="Complemento">
+        <input type="text" name="district" placeholder="Bairro">
+        <input type="text" name="city" placeholder="Cidade">
+
+      </fieldset>
+
+*SELECT
+    Tag usada para definir um campo de lista suspensa;
+    Cada opção do campo é definida por uma tag OPTION;
+    Exemplo:
+      
+      <select>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="EX">Estrangeiro</option>
+      </select>
+
+*OPTION
+    Tag usada para colocar itens de opções dentro da tag SELECT;
+    Exemplo:
+      <select>
+        <option value="RR" disabled>Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP" selected>São Paulo</option>
+      </select>
+
+*OPTGROUP
+    Tag usada para definir um grupo de opções para a tag OPTION;
+    Exemplo:
+      <select>
+
+        <optgroup label="FrontEnd">
+          <option>HTML 5</option>
+          <option>CSS 3</option>
+          <option>JavaScript</option>
+        </optgroup>
+        <optgroup label="backEnd">
+          <option>PHP 7</option>
+          <option>Node</option>
+          <option>Python</option>
+        </optgroup>
+
+      </select>
+
+*DATALIST
+    Tag usada para definir uma lista de opções para um input;
+    O ID desta tag é usado no atributo LIST da tag INPUT para vinculação;
+    Exemplos:
+      
+      <input type="text" id="opcoes">
+
+      <datalist id="opcoes">
+        <option>PHP</option>
+        <option>JavaScript</option>
+        <option>Laravel</option>
+        <option>Bootstrap</option>
+      </datalist>
+
+*TEXTAREA
+      Tag usada definir um campo de entrada de texto com várias linhas;
+      Exemplo:
+
+        <textarea name="descricao" cols="30" rows="10"></textarea>
+    
+*DIALOG
+      Tag usada para definir uma caiax de diálogo;
+      Esta tag facilita a criação de um modal na página;
+      Exemplo:
+
+        <dialog open>
+
+          Hello Dev!
+
+        </dialog>
+
+*OUTPUT
+      Tag usada para mostrar o resultado de um cálculo;
+      Exemplo:
+      
+        <form oninput="c.value = parseInt(a.value) + parseInt(b.value)">
+
+          <input type="range" id="a" value="0" min="0" max="10">
+          +
+          <input type="number" id="b" value="0">
+          =
+          <output name="c" for="a b">0</output>
+
+        </form>
+
+*METER
+      Tag usada para definir uma medida dentro de um intervalo;
+      Aparência de um status ou progresso de medida;
+      Atributos:
+        - FORM = Define qual formulário esse medidor pertence;
+        - HIGH = Define a partir de qual valor deve ser considerado um valor alto;
+        - LOW = Define até qual valor deve ser considerado um valor baixo;
+        - MAX = Define o valor máximo;
+        - MIN = Define o valor mínimo;
+        - OPTIMUM = Define o valor ideal para o medidor;
+        - VALUE = Define o valor atual;
+      Exemplo:
+
+        <meter min="0" max="100" value="30" high="90" low="10" optimum="50">
+          0 de 100
+        </meter>
+
+*PROGRESS
+      Tag usada para definir o nível de progresso de uma tarefa;
+      Exemplo:
+        
+        <progress max="50" value="30"></progress>
+
+*CANVAS
+      Tag usada para definir um quadro de desenhos gráficos 2D ou 3D;
+      Para desenhar é necessário usar o JavaScript;
+      Exemplo:
+        
+        //Desenhando um quadrado dentro de um quadro CANVAS
+
+        <canvas id="quadro" style="background-color: black;"></canvas>
+
+        <script>
+
+          const quadro = document.querySelector('#quadro');
+          const contexto = quadro.getContext('2D');
+
+          contexto.fillStyle = '#FF0000';
+          contexto.fillStyle(0, 0, 100, 100);
+
+        </script>
+
+*SVG
+    Tag usada para definir um contêiner para gráficos vetoriais escaláveis;
+    Imagens SVG não perdem qualidade quando aumentamos a resolução delas;
+    Essa estrutura de tags do SVG, posso clolocar e criar um arquivo .svg e chama-lo como imagem no arquivo HTML com <img src="logo.svg">
+    Exemplo:
+
+        <svg>
+          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+        </svg>
+
+*HGROUP
+    Tag usada para agrupar as tags h1, h2, h3, h4, h5 e h6
+    Exemplo:
+
+        <hgroup>
+          <h1>Título</h1>
+          <h2>Sub-título</h2>
+        </hgroup>
+
+*MARQUEE
+    Tag usada para definir uma área de rolagem do texto;
+    Exemplo:
+
+        // O texto ficará rolando para cima
+        <marquee direction="up">Empresa de Tecnologia</marquee>
+
+        // O texto ficará rolando para baixa
+        <marquee direction="down" width="250" height="200">
+          Empresa de Tecnologia
+        </marquee>
+
+        // Com BEHAVIOR e atributo ALTERNATE o efeito visual será o texto descendo e subindo
+        <marquee direction="down" width="250" height="200" behavior="alternate">
+          Empresa de Tecnologia
+        </marquee>
+
+        // Com um MARQUE dentro do outro usando atributo BEHAVIOR com seu valor ALTERNATE, o texto ficará indo para todas as direções
+        <marquee direction="down" width="250" height="200" behavior="alternate">
+          
+          <marquee behavior="alternate">
+            Empresa de Tecnologia
+          </marquee>
+
+        </marquee>
