@@ -12,3 +12,77 @@
 
 
 *EVENTO: BEFOREUNLOAD
+    Muito usado quando o usuário tenta sair da página e o navegador tenta impedir colocando uma mensagem;
+    Exemplo:
+    <body onbeforeunload="return debug(event)">
+    
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+          return 'Evento: ' + e.type;
+        }
+      </script>
+    </body>
+
+*EVENTO: ERROR
+    Exemplo:
+    <body>
+    
+      //Quando a imagem não é encontrada coloco um alerta na página
+      <img src="images/udiauhdiua" alt="Imagem" onerror="debug(event)">
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+          alert('Evento: ' + e.type);
+        }
+      </script>
+    </body>
+
+
+*EVENTO: HASHCHANGE
+    Evento que acontece quando tem uma alteração na nossa hash;
+    Exemplo:
+      <body onhashchange="debug(event)">
+
+        <script>
+
+          function debug(e) {
+            console.log('Evento: ' + e.type);
+            alert(''Evento: ' + e.type')
+          }
+        </script>
+
+      </body>
+
+*EVENTO: LOAD
+    Evento que acontece quando a página é carregada
+    Exemplo:
+    <body onload="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+          alert(''Evento: ' + e.type')
+        }
+      </script>
+
+    </body>
+
+*EVENTOS: OFFLINE & ONLINE
+    Evento que ocorre quando a janela da página perde ou ganha conexão com a internet;
+    Exemplo:
+    <body ononline="debug(event)" onoffline="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+          alert(''Evento: ' + e.type')
+        }
+      </script>
+
+    </body>
+
+*EVENTO: PAGESHOW
