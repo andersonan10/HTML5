@@ -1,0 +1,171 @@
+*EVENTO: BLUR
+    Evento que ocorre quando um texro perde o foco;
+    Ocorre também quando abrimos outro programa em cima da janela e deixamos a página em segundo plano;
+    Exemplo:
+      <body onblur="debug(event)">
+
+        <script>
+
+          function debug(e) {
+            console.log('Evento: ' + e.type);
+          }
+        </script>
+
+      </body>
+
+*EVENTO: CHANGE
+    Evento que ocorre quando os dados de um formulário são alterados;
+    Exemplo:
+    <body>
+      
+      <input type="text" onblur="debug(event)" onchange="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: CONTEXTMENU
+    Evento que ocorre quando clicamos no contexto que ele se aplica, neste caso no input;
+    Ocorre também quando apertamos a tecla do teclado CONTEXTO que fica do lado de ALT Gr;
+    Exemplo:
+    <body>
+      
+      <input type="text" oncontextmenu="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: FOCUS
+    Evento que ocorre quando focamos em um elemnto da página com mouse ou teclado com a tecla TAB;
+    Exemplo:
+    <body>
+      
+      <input type="text" onfocus="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: INPUT
+    Evento que ocorre quando temos entrada de dados dentro de um campo de input;
+    Exemplo:
+    <body>
+      
+      <input type="text" oninput="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: INVALID
+    Evento que ocorre quando o campo está inválido;
+    Exemplo:
+    <body>
+      
+      <form>
+        <input type="email" oninvalid="debug(event)" required>
+        <button type="submit">Enviar</button>
+      </form>
+      
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: RESET
+    Evento que ocorre quando limpamos o formulário com o botão de tipo RESET;
+    Exemplo:
+    <body>
+      
+      <form onreset="debug(event)">
+        <input type="text">
+        <button type="reset">Limpar</button>
+      </form>
+      
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: SEARCH
+    Evento que ocorre quando o usuário busca algo em um campo de busca e aperta ENTER;
+    Exemplo:
+    <body>
+      
+      <input type="search" onsearch="debug(event)">
+      
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: SELECT
+    Evento que ocorre quando o usuário seleciona um texto dentro de um campo de busca;
+    Exemplo:
+    <body>
+      
+      <input type="search" onselect="debug(event)">
+      
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+*EVENTO: SUBMIT
+    Evento que ocorre quando o formulário é enviado;
+    Exemplo:
+    <body>
+      
+      <form onsubmit="debug(event)">
+        <input type="text">
+        <button type="submit">Enviar</button>
+      </form>
+      
+      
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>

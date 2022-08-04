@@ -49,7 +49,7 @@
 
           function debug(e) {
             console.log('Evento: ' + e.type);
-            alert(''Evento: ' + e.type')
+            alert('Evento: ' + e.type)
           }
         </script>
 
@@ -64,7 +64,7 @@
 
         function debug(e) {
           console.log('Evento: ' + e.type);
-          alert(''Evento: ' + e.type')
+          alert('Evento: ' + e.type)
         }
       </script>
 
@@ -79,10 +79,54 @@
 
         function debug(e) {
           console.log('Evento: ' + e.type);
-          alert(''Evento: ' + e.type')
+          alert('Evento: ' + e.type)
         }
       </script>
 
     </body>
 
 *EVENTO: PAGESHOW
+    Evento que ocorre quando a página é exibida para o usuário;
+    Parecido com o Evento LOAD;
+    O Evento LOAD carrega mais rápido por ser ativado antes mesmo da página ser carregada;
+    Exemplo:
+    <body onpageshow="debug(event)">
+
+      <script>
+
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+          alert('Evento: ' + e.type)
+        }
+      </script>
+
+    </body>
+
+*EVENTO: RESIZE
+    Evento que ocorre quando mudamos a dimensão da janela ou redimensionamos ela;
+    Exemplo:
+      <body onresize="debug(event)">
+
+        <script>
+
+          function debug(e) {
+            console.log('Evento: ' + e.type);
+          }
+        </script>
+
+      </body>
+
+*EVENTO: UNLOAD
+    Evento que ocorre a página é descarrgada;
+    Exemplo:
+      <body onunload="return debug(event)">
+
+        <script>
+
+          function debug(e) {
+            console.log('Evento: ' + e.type);
+            return 'Evento: ' + e.type;
+          }
+        </script>
+
+      </body>
