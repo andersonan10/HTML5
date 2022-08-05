@@ -1,0 +1,226 @@
+*EVENTO: CLICK
+  Evento que ocorre quando o usuário clica em um botão normalmente;
+  Exemplo:
+  <body>
+      
+    <button type="button" onclick="debug(event)">OK</button>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DBLCLICK
+  Evento que ocorre quando o usuário clica 2x em um elemnto;
+  Exemplo:
+  <body>
+      
+    <button type="button" ondblclick="debug(event)">OK</button>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSEDOWN
+  Evento muito parecido com o ONCLICK, porém a diferença é que ele ocorre no momento do clique antes mesmo do clicque soltar;
+  Exemplo seria quando o usuário vai clicar e deixa clicado o elemento sem soltar o cursor do elemento;
+  Exemplo:
+  <body>
+      
+    <button type="button" onmousedown="debug(event)">OK</button>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSEMOVE
+  Evento que ocorre quando o cursor do mouse se movimenta sobre um elemnto;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onmousemove="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSEOUT
+  Evento que ocorre quando o mouse sai de um elemnto;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onmouseout="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSEOVER
+  Evento que ocorre quando o mouse entra em um elemento;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onmouseover="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSEUP
+  Evento que ocorre no momento em que o clique do mouse é soltado depois de já ter clicado;
+  Ele é parecido com o evento CLICK;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onmouseup="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: WHEEL
+  Evento que ocorre quando utilizamos a roda do mouse;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onwheel="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSEENTER
+  Evento que ocorre quando o mouse entra em um elemnto;
+  Semelhante ao evento MOUSEOVER;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onmouseenter="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: MOUSELEAVE
+  Evento que ocorre quando o mouse sai de um elemnto;
+  Semelhante ao evento MOUSEOUT;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div onmouseleave="debug(event)"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>

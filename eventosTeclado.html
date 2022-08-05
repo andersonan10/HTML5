@@ -1,0 +1,47 @@
+EVENTO: KEYDOWN
+  Evento que ocorre quando o usuário aperta uma teclado do teclado;
+  Exemplo:
+  <body>
+      
+    <input type="text" onkeydown="debug(event)">
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: KEYPRESS
+  Evento que ocorre quando o usuário deixa pressionado uma tecla do teclado;
+  Exemplo:
+  <body>
+      
+    <input type="text" onkeypress="debug(event)">
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: KEYUP
+  Evento que ocorre no momento em que a tecla do teclado é soltado depois que ela foi teclada;
+  Exemplo:
+  <body>
+      
+    <input type="text" onkeyup="debug(event)">
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>

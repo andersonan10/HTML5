@@ -1,0 +1,117 @@
+*EVENTO: DRAG
+  Evento que ocorre enquanto o usuário estiver arrastando um elemnto da página;
+  Precisa colocar Atributo DRAGGABLE com valor TRUE no elemento para funcionar;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div ondrag="debug(event)" draggable="true"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DRAGEND
+  Evento que ocorre quando o usuário para de arrastar um elemento, ou solta o elemento;
+  Exemplo:
+  <head>
+    <style>
+      div {
+        width: 50vw;
+        height: 50vw;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div ondragend="debug(event)" draggable="true"></div>
+    
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DRAGENTER
+  Evento que ocorre no momento em que um elemento que esta sendo arrastado entra em um outro elemento;
+  Exemplo:
+  <head>
+    <style>
+      #drag {
+        width: 30vw;
+        height: 30vw;
+        background-color: brown;
+      }
+      #target {
+        width: 30vw;
+        height: 30vw;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" draggable="true">
+    </div>
+    
+    <div id="target" ondragenter="debug(event)"></div>
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DRAGLEAVE
+  Evento que ocorre quando o elemento que esta sendo arrastado entra em um alvo e quando sai desse alvo ele é acionado;
+  Exemplo:
+  <head>
+    <style>
+      #drag {
+        width: 30vw;
+        height: 30vw;
+        background-color: brown;
+      }
+      #target {
+        width: 30vw;
+        height: 30vw;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" draggable="true">
+    </div>
+    
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)"></div>
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DRAGOVER
+  Evento 
