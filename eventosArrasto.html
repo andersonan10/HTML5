@@ -72,6 +72,7 @@
     </div>
     
     <div id="target" ondragenter="debug(event)"></div>
+
     <script>
 
       function debug(e) {
@@ -104,6 +105,7 @@
     </div>
     
     <div id="target" ondragenter="debug(event)" ondragleave="debug(event)"></div>
+
     <script>
 
       function debug(e) {
@@ -114,4 +116,135 @@
   </body>
 
 *EVENTO: DRAGOVER
-  Evento 
+  Evento que ocorre quando um elemento arrastado esta em cima de um elemento alvo;
+  Exemplo:
+  <head>
+    <style>
+      #drag {
+        width: 30vw;
+        height: 30vw;
+        background-color: brown;
+      }
+      #target {
+        width: 30vw;
+        height: 30vw;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" draggable="true">
+    </div>
+    
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)" 
+    ondragover="debug(event)">
+    </div>
+
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DRAGSTART
+  Evento que ocorre no momento que ele arrasta;
+  Semelhante ao evento ONDRAG, a diferença é que o ONDRAG continua enquanto o elemento continua sendo arrastado;
+  Exemplo:
+  <head>
+    <style>
+      #drag {
+        width: 30vw;
+        height: 30vw;
+        background-color: brown;
+      }
+      #target {
+        width: 30vw;
+        height: 30vw;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" ondragstart="debug(event)"
+    draggable="true">
+    </div>
+    
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)" 
+    ondragover="debug(event)">
+    </div>
+
+    <script>
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: DROP
+  Evento que ocorre no momento que solto um elemento arrastado em um alvo;
+  Precisa cancelar o comportamento padrão no navegador para acontecer, pois o navegador tem um evento padrão de arrastar foto nele e ele abrir essa foto;
+  Cancelando o Evento DRAGOVER;
+  Exemplo:
+  <head>
+    <style>
+      #drag {
+        width: 30vw;
+        height: 30vw;
+        background-color: brown;
+      }
+      #target {
+        width: 30vw;
+        height: 30vw;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" ondragstart="debug(event)"
+    draggable="true">
+    </div>
+    
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)" 
+    ondragover="cancel(event)" ondrop="debug(event)">
+    </div>
+
+    <script>
+      function cancel(e) {
+        e.preventDefault();
+      }
+
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: SCROLL
+  Evento que ocorre quando tem uma barra de rolagem sa página sendo acionada;
+  Exemplo:
+  <head>
+    <style>
+      #body {
+        height: 200vh;
+      }
+    </style>
+  </head>
+  <body onscroll="debug(event)">
+      
+    <script>
+      
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
