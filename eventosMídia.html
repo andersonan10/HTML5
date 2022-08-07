@@ -1,0 +1,31 @@
+Para reproduir os Eventos de mídia precisa ter um servidor web rodando;
+  Instalando um servidor web simples em node:
+    - Instalar a ultima versão estável do NODE;
+    - No terminal do VSCode rodar: npm install http-server -g;
+    - Estando na mesma pasta do projeto, rodo: http-server;
+
+
+
+
+*EVENTO: ABORT
+  Evento que ocorre quando o carregamento de uma mídia é abortada pelo servidor ou qualquer outro motivo como rede;
+  Exemplo:
+  <body>
+    
+    <video 
+      src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+      controls
+      onabort="debug(event)">
+      
+    </video>
+
+    <script>
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+
+*EVENTO: CANPLAY

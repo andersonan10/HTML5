@@ -1,2 +1,52 @@
 *EVENTO: COPY
-  Evento 
+  Evento que é acionado quando um elemento da página é copiado;
+  Exemplo:
+  <body>
+
+    <p oncopy="debug(event)">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda beatae, quibusdam repellat natus quos sequi. Sit ratione possimus doloremque nostrum adipisci? Et in modi quam nobis asperiores, voluptatum adipisci. Sed.</p>
+      
+    <script>
+      
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: CUT
+  Evento que é acionado quando um elemento da página é recortado;
+  Exemplo:
+  <body>
+
+    <input type="text" oncut="debug(event)">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda beatae, quibusdam repellat natus quos sequi. Sit ratione possimus doloremque nostrum adipisci? Et in modi quam nobis asperiores, voluptatum adipisci. Sed.</p>
+      
+    <script>
+      
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
+*EVENTO: PASTE
+  Evento que é acionado quando um elemento da página é colado;
+  Exemplo:
+  <body>
+
+    <input type="text" onpaste="debug(event)">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda beatae, quibusdam repellat natus quos sequi. Sit ratione possimus doloremque nostrum adipisci? Et in modi quam nobis asperiores, voluptatum adipisci. Sed.</p>
+      
+    <script>
+      
+      function debug(e) {
+        console.log('Evento: ' + e.type);
+      }
+    </script>
+
+  </body>
+
