@@ -114,4 +114,422 @@ Para reproduir os Eventos de mídia precisa ter um servidor web rodando;
 
 
 *EVENTO: EMPTIED
-  Evento
+  Evento que ocorre quando algum problema ocorre e a mídia fica indisponível;
+  Exemplo:
+    <body>
+          
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onemptied="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: ENDED
+  Evento que ocorre quando o arquivo de mídia da página foi consumido até o final;
+  Exemplo:
+    <body>
+          
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onended="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: ERROR
+  Evento que ocorre quando tem algum erro ao tentar reproduzir a mídia;
+  Pode ser por exemplo uma mídia que não existe;
+  Exemplo:
+    <body>
+          
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/nao_existe.mp4"
+        controls
+        onerror="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: LOADEDDATA
+  Evento que ocorre quando os dados do vídeo são recebidos pelo navegador;
+  Exemplo:
+    <body>
+          
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onloadeddata="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: LOADEDMETADATA
+  Evento que ocorre quando os metadados do vídeo são recebidos pelo navegador;
+  Exemplo:
+    <body>
+          
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onloadedmetadata="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: LOADSTART
+  Evento que ocorre quando os dados do vídeo começam a ser carregados;
+  Exemplo:
+    <body>
+            
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onloadstart="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: PAUSE
+  Evento que ocorre quando o usuário pausa a reprodução do vídeo;
+  Exemplo:
+    <body>
+              
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onpause="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: PLAY
+  Evento que ocorre quando o usuário da um play na mídia;
+  Exemplo:
+    <body>
+              
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onplay="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: PALYING
+  Evento que ocorre quando o usuário da um play na mídia e ele está de fato reproduzindo;
+  A difereça do PLAYING para o PLAY é que o PLAYING só será acionado se o vídeo realmente for reproduzido;
+  Exemplo:
+    <body>
+              
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onplaying="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: PROGRESS
+  Evento que ocorre no momento em que os dados de download do vídeo estão sendo baixados;
+  Exemplo:
+    <body>
+                
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onprogress="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: RATECHANGE
+  Evento que ocorre quando a taxa de reprodução da mídia é alterado;
+  Normalmente quando o usuário altera a velocidade de reprodução do vídeo;
+  Exemplo:
+    <body>
+
+      <select onchange="setrate(event)">
+        <option>0.25</option>
+        <option>0.5</option>
+        <option>0.75</option>
+        <option selected>1</option>
+        <option>1.25</option>
+        <option>1.5</option>
+        <option>1.75</option>
+        <option>2</option>
+      </select>
+                
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onratechange="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+
+        function setRate(e) {
+          const videoE1 = document.querySelector('video');
+          const value = e.target.value;
+
+          videoE1.playbackRate = parseFloat(value);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: SEEKED
+  Evento que ocorre quando os dados que o navegador buscou do vídeo já foram encontrados;
+  Exemplo:
+    <body>
+                  
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onseeked="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: SEEKING
+  Evento que ocorre quando os dados que o navegador buscou do vídeo realmente foram encontrados, diferente do SEEKED;
+  Exemplo:
+    <body>
+                    
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onseeking="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: STALLED
+  Evento que ocorre quando os dados da mídia não podem ser carregados por qualquer motivo que seja;
+  Exemplo:
+    <body>
+                    
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onstalled="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: SUSPEND
+  Evento que ocorre quando a busca pelos dados da mídia é encontrado, mas no processo de download ela é suspensa;
+  Exemplo:
+    <body>
+                    
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onsuspend="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: TIMEUPDATE
+  Evento que ocorre quando o tempo de reprodução do vídeo é alterado;
+  Ocorre realmente quando esta sendo reproduzido a mídia;
+  Exemplo:
+    <body>
+                    
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        ontimeupdate="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: VOLUMECHANGE
+  Evento que ocorre quando o volume da mídia é alterado;
+  Não ocorre quando o volume do sistema operacional é alterado;
+  Exemplo:
+    <body>
+                    
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onvolumechange="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: WAITING
+  Evento que ocorre quando o video é pausado para armazenar mais dados em buffer;
+  Normalmente ocorre quando o video esta sendo reproduzido e derreende a internet fica lenta o vídeo pausa para carregar mais dados em buffer;
+  Exemplo:
+    <body>
+                    
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        onwaiting="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: TOGGLE
+  Evento que ocorre no elemento DETAILS;
+  Ocorre quando a página tem a tag DETAILS e o usuário mostra e esconde esse elemento;
+  Exemplo:
+    <body>
+                    
+      <details ontoggle="debug(event)">
+        <sumary>Empresa</sumary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cumque dolor nisi quae ex nihil, dicta voluptatum quasi in accusantium doloribus sit. Neque nulla culpa dolorem tenetur ipsam eos explicabo.</p>
+      </details>
+
+      <script>
+        function debug(event) {
+          console.log('Evento: ' + event.type);
+        }
+      </script>
+
+    </body>
