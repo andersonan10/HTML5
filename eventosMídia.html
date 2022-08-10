@@ -29,5 +29,89 @@ Para reproduir os Eventos de mídia precisa ter um servidor web rodando;
 
 
 *EVENTO: CANPLAY
-  Evento que ocorre quando a o vídeo já pode ser reproduzido mesmo que não seja até o final;
+  Evento que ocorre quando o vídeo já pode ser reproduzido mesmo que não seja até o final;
   Exemplo:
+    <body>
+      
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        oncanplay="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: CANPLAYTHROUGH
+  Evento que ocorre quando a página já tem dados suficientes para rodar o vídeo até o final;
+  Exemplo:
+    <body>
+      
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        oncanplaythrough="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: CUECHANGE
+  Evento que ocorre quando um texo de uma mídia é alterado, uma legenda sendo alterada por exemplo;
+  Exemplo:
+    <body>
+      
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls>
+
+        <track src="tracks/AV1_trailer_pt.vtt" label="Português" kind="subtitles" srclang="pt" default oncuechange="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: DURATIONCHANGE
+  Evento que ocorre quando a duração do arquivo de mídia é alterado;
+  Exemplo:
+    <body>
+        
+      <video 
+        src="https://storage.googleapis.com/sitequalquer-public-storage/videos/video1.mp4"
+        controls
+        ondurationchange="debug(event)">
+        
+      </video>
+
+      <script>
+        function debug(e) {
+          console.log('Evento: ' + e.type);
+        }
+      </script>
+
+    </body>
+
+
+*EVENTO: EMPTIED
+  Evento
